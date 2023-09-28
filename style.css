@@ -25,13 +25,20 @@ body {
 }
 
 textarea {
-	width: 550px;
+	width: 200px;
+	height: 350px;
+	max-width: 500px;
 	height: 150px;
 	resize: none; /* Evita que el usuario cambie el tamaño del textarea */
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	font-size: 16px;
+}
+@media screen and (min-width: 500px) {
+	textarea {
+		width: 500px;
+	}
 }
 
 button {
