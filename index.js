@@ -3,6 +3,8 @@ const parar = document.getElementById('parar');
 const text = document.getElementById('text');
 const parent = document.querySelector('.parent');
 const recognition = new webkitSpeechRecognition();
+
+parar.style.display = 'none';
 recognition.lang = 'es-ES';
 recognition.continuous = true;
 recognition.onresult = (event) => {
@@ -14,6 +16,7 @@ recognition.onresult = (event) => {
 escuchar.addEventListener('click', () => {
 	recognition.start();
 	escuchar.style = 'display:none';
+	parar.style = 'display:inline-block';
 	parent.classList.add = 'item';
 	parent.classList.add = 'uno';
 });
@@ -21,4 +24,5 @@ escuchar.addEventListener('click', () => {
 parar.addEventListener('click', () => {
 	recognition.abort();
 	escuchar.style = 'display:inline-block';
+	parar.style.display = 'none';
 });
