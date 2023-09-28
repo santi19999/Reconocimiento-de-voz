@@ -1,6 +1,7 @@
 const escuchar = document.getElementById('escuchar');
 const parar = document.getElementById('parar');
 const text = document.getElementById('text');
+const parent = document.querySelector('.parent');
 const recognition = new webkitSpeechRecognition();
 recognition.lang = 'es-ES';
 recognition.continuous = true;
@@ -12,8 +13,12 @@ recognition.onresult = (event) => {
 
 escuchar.addEventListener('click', () => {
 	recognition.start();
+	escuchar.style = 'display:none';
+	parent.classList.add = 'item';
+	parent.classList.add = 'uno';
 });
 
 parar.addEventListener('click', () => {
 	recognition.abort();
+	escuchar.style = 'display:inline-block';
 });

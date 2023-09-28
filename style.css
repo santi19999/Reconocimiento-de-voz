@@ -1,0 +1,77 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-image: url('https://tutraductorlegal.com/wp-content/uploads/2019/04/fondoConstruccion.jpg');
+	background-repeat: none;
+	background-size: cover;
+}
+
+.parent {
+	background-color: #5072a7;
+	text-align: center;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	padding: 25px;
+	border-radius: 24px;
+}
+
+.textarea-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px;
+}
+
+textarea {
+	width: 550px;
+	height: 150px;
+	resize: none; /* Evita que el usuario cambie el tamaño del textarea */
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #007bff; /* Cambia este color según tus preferencias */
+	color: #fff;
+	border: none;
+
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.2s ease;
+}
+
+button:hover {
+	background-color: #0056b3; /* Cambia este color según tus preferencias */
+}
+.item {
+	background-color: rgba(0, 0, 0, 0.4);
+	line-height: 4;
+	padding: 0 2em;
+	margin: 1.5em;
+	color: #fff;
+	position: relative;
+}
+.item:before {
+	position: absolute;
+	bottom: 0;
+	content: '';
+	display: block;
+	width: 0;
+	height: 3px;
+	background-color: #fff;
+	transition: all 0.3s;
+}
+.item:hover:before {
+	width: 100%;
+}
+
+.uno:before {
+	left: 0;
+}
